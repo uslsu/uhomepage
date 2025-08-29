@@ -1,27 +1,22 @@
 :root {
-  /* 颜色系统 */
   --bg: #e8e8e8;
   --text: #1a1f2b;
   --accent: #ffd84d;
 
-  /* 间距系统 */
   --spacing-sm: 16px;
   --spacing-md: 24px;
   --spacing-lg: 40px;
   --spacing-xl: 56px;
 
-  /* 阴影系统 */
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08);
   --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.12);
 
-  /* 玻璃效果 */
   --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.1));
   --glass-border: 1px solid rgba(255, 255, 255, 0.38);
   --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset;
   --glass-blur: saturate(180%) blur(16px);
 
-  /* 动画 */
   --transition-smooth: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
@@ -37,7 +32,6 @@ body {
   line-height: 1.5;
 }
 
-/* 添加屏幕阅读器专用样式类 */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -59,7 +53,6 @@ body {
   text-align: center;
 }
 
-/* 头像 */
 .avatar {
   width: 112px;
   height: 112px;
@@ -85,7 +78,6 @@ body {
   display: block;
 }
 
-/* 添加新的多行欢迎文本样式 */
 .welcome-text {
   display: flex;
   flex-direction: column;
@@ -149,7 +141,6 @@ body {
   box-shadow: var(--glass-shadow), var(--shadow-lg);
   backdrop-filter: var(--glass-blur);
   color: #0f172a;
-  /* 统一transition格式为多行清晰格式 */
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, color 0.22s ease, background 0.22s
   ease;
   position: relative;
@@ -171,7 +162,6 @@ body {
   font-size: 25px;
 }
 
-/* hover/focus 效果（仅在支持悬停的设备开启）*/
 @media (hover: hover) and (pointer: fine) {
   .socials .social:hover .btn {
     transform: translateY(-2px);
@@ -205,7 +195,6 @@ body {
   }
 }
 
-/* tooltip 优化 - 解决遮挡问题 */
 .socials .tooltip {
   position: absolute;
   top: -20px;
@@ -222,7 +211,6 @@ body {
   border: var(--glass-border);
   box-shadow: var(--shadow-md);
   backdrop-filter: saturate(180%) blur(12px);
-  /* 统一transition格式为多行清晰格式 */
   transition: top 0.22s var(--transition-smooth), opacity 0.22s var(--transition-smooth), transform 0.22s
   var(--transition-smooth);
   white-space: nowrap;
@@ -247,7 +235,6 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* 卡片网格 */
 .grid {
   width: min(920px, 100%);
   display: grid;
@@ -329,7 +316,6 @@ body {
   line-height: 1;
 }
 
-/* 卡片颜色优化 */
 .blog-card .glyph i {
   color: #ef4444;
 }
@@ -355,7 +341,6 @@ body {
   }
 }
 
-/* 无 backdrop-filter 兜底 */
 @supports not (backdrop-filter: blur(0)) {
   .socials .btn,
   .socials .tooltip,
@@ -370,14 +355,12 @@ body {
   }
 }
 
-/* 辅助可访问性 */
 :focus-visible {
   outline: 3px solid #94a3b8;
   outline-offset: 3px;
   border-radius: 12px;
 }
 
-/* 降低动画 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
