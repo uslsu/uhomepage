@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="uocou · 个人主页 · Blog、image Hosting、Whois、Address、AFF、Scam Record">
+  <meta name="theme-color" content="#e8e8e8">
+  <title>uocou · Home</title>
+
+  <!-- 优先连接字体域名，减少握手耗时 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome（只引入需要的图标）-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- 样式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-name="uocou" data-avatar="https://img.duoziwang.com/2021/01/03131614813101.jpg">
+<main class="wrap">
+  <!-- 添加真正的h1主标题用于SEO和可访问性 -->
+  <h1 class="sr-only">uocou - 个人主页</h1>
+
+  <!-- 移除无效的aria-labelledby属性 -->
+  <figure class="avatar">
+    <img id="avatar-img" src="https://img.duoziwang.com/2021/01/03131614813101.jpg" alt="uocou 的头像" decoding="async" loading="eager" width="112" height="112" />
+  </figure>
+
+  <!-- 简化标题，只保留 uocou -->
+  <div class="welcome-text">
+    <div class="title" id="display-name">uocou</div>
+  </div>
+
+  <!-- 社交（补全语义链） -->
+  <nav class="socials" aria-label="社交链接">
+    <!-- 添加noreferrer到rel属性中 -->
+    <a href="https://t.me/DMPush_bot" class="social telegram" target="_blank" rel="noopener noreferrer" aria-label="前往 Telegram" aria-describedby="tooltip-telegram">
+      <!-- 添加id和aria-describedby建立语义链接 -->
+      <span class="tooltip" id="tooltip-telegram">Telegram</span>
+      <span class="btn" aria-hidden="true"><i class="fa-brands fa-telegram"></i></span>
+    </a>
+
+    <!-- 添加noreferrer到rel属性中 -->
+    <a href="https://github.com/uslsu" class="social github" target="_blank" rel="noopener noreferrer" aria-label="前往 GitHub" aria-describedby="tooltip-github">
+      <!-- 添加id和aria-describedby建立语义链接 -->
+      <span class="tooltip" id="tooltip-github">GitHub</span>
+      <span class="btn" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
+    </a>
+  </nav>
+
+  <!-- 功能入口 -->
+  <section class="grid" aria-label="功能导航">
+    <!-- 为所有外链添加noreferrer -->
+    <a class="card blog-card" href="https://blog.uocou.com" target="_blank" rel="noopener noreferrer" aria-label="Blog">
+      <span class="glyph"><i class="fa-solid fa-blog" aria-hidden="true"></i></span>
+      <span class="label">Blog</span>
+    </a>
+
+    <a class="card image-card" href="https://img.uocou.com" target="_blank" rel="noopener noreferrer" aria-label="image Hosting">
+      <span class="glyph"><i class="fa-solid fa-image" aria-hidden="true"></i></span>
+      <span class="label">image Hosting</span>
+    </a>
+
+    <a class="card whois-card" href="https://wis.uocou.com" target="_blank" rel="noopener noreferrer" aria-label="Whois">
+      <span class="glyph"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+      <span class="label">Whois</span>
+    </a>
+
+    <a class="card address-card" href="https://add.uocou.com" target="_blank" rel="noopener noreferrer" aria-label="Address">
+      <span class="glyph"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span>
+      <span class="label">Address</span>
+    </a>
+
+    <a class="card aff-card" href="https://aff.uocou.com" target="_blank" rel="noopener noreferrer" aria-label="AFF">
+      <span class="glyph"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+      <span class="label">AFF</span>
+    </a>
+
+
+    <a class="card scam-card" href="https://t.me/hezupz" target="_blank" rel="noopener noreferrer" aria-label="Scam Record">
+      <span class="glyph"><i class="fa-solid fa-ban" aria-hidden="true"></i></span>
+      <span class="label">Scam Record</span>
+    </a>
+  </section>
+</main>
+
+<noscript>本页面使用少量 JavaScript 设置头像与昵称；若禁用脚本，显示为默认值。</noscript>
+
+<!-- 脚本 -->
+<script src="app.js" defer></script>
+</body>
+</html>

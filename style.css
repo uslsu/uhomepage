@@ -1,0 +1,390 @@
+:root {
+  /* 颜色系统 */
+  --bg: #e8e8e8;
+  --text: #1a1f2b;
+  --accent: #ffd84d;
+
+  /* 间距系统 */
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 56px;
+
+  /* 阴影系统 */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+  /* 玻璃效果 */
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.1));
+  --glass-border: 1px solid rgba(255, 255, 255, 0.38);
+  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset;
+  --glass-blur: saturate(180%) blur(16px);
+
+  /* 动画 */
+  --transition-smooth: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+/* 添加屏幕阅读器专用样式类 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.wrap {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-sm) 64px;
+  text-align: center;
+}
+
+/* 头像 */
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 添加新的多行欢迎文本样式 */
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0 var(--spacing-md);
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 0.5em;
+  background: var(--accent);
+  z-index: -1;
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineGrow 0.8s var(--transition-smooth) 0.5s forwards;
+}
+
+@keyframes underlineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.socials {
+  display: inline-flex;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-sm) 0 64px;
+  padding-top: 80px;
+}
+
+.socials .social {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials .btn {
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--shadow-lg);
+  backdrop-filter: var(--glass-blur);
+  color: #0f172a;
+  /* 统一transition格式为多行清晰格式 */
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, color 0.22s ease, background 0.22s
+  ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.socials .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.socials i {
+  line-height: 60px;
+  font-size: 25px;
+}
+
+/* hover/focus 效果（仅在支持悬停的设备开启）*/
+@media (hover: hover) and (pointer: fine) {
+  .socials .social:hover .btn {
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  .socials .social:hover .btn::before {
+    opacity: 1;
+  }
+
+  .socials .telegram:hover .btn {
+    background: linear-gradient(135deg, rgba(38, 165, 228, 0.35), rgba(38, 165, 228, 0.18));
+    border-color: rgba(38, 165, 228, 0.55);
+    box-shadow: var(--glass-shadow), 0 16px 32px rgba(38, 165, 228, 0.25);
+  }
+
+  .socials .github:hover .btn {
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.35), rgba(51, 51, 51, 0.2));
+    border-color: rgba(51, 51, 51, 0.55);
+    box-shadow: var(--glass-shadow), 0 16px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: var(--glass-shadow), 0 40px 80px rgba(0, 0, 0, 0.18);
+  }
+
+  .card:hover .glyph {
+    transform: scale(1.12);
+  }
+}
+
+/* tooltip 优化 - 解决遮挡问题 */
+.socials .tooltip {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--glass-bg);
+  color: #0f172a;
+  border: var(--glass-border);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: saturate(180%) blur(12px);
+  /* 统一transition格式为多行清晰格式 */
+  transition: top 0.22s var(--transition-smooth), opacity 0.22s var(--transition-smooth), transform 0.22s
+  var(--transition-smooth);
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.socials .tooltip::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.socials .social:focus-visible .tooltip,
+.socials .social:hover .tooltip {
+  top: -75px;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 卡片网格 */
+.grid {
+  width: min(920px, 100%);
+  display: grid;
+  gap: var(--spacing-sm);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 460px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .socials {
+    gap: 32px;
+    padding-top: 60px;
+    margin-bottom: 48px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 90px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0f172a;
+  text-decoration: none;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--shadow-xl);
+  backdrop-filter: var(--glass-blur);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  padding: 0 14px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.65),
+          rgba(255, 255, 255, 0.2) 45%,
+          rgba(255, 255, 255, 0.08) 100%
+  );
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.55;
+}
+
+.glyph {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 26px;
+  transition: transform 0.2s ease;
+}
+
+.glyph i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.label {
+  line-height: 1;
+}
+
+/* 卡片颜色优化 */
+.blog-card .glyph i {
+  color: #ef4444;
+}
+.image-card .glyph i {
+  color: #2563eb;
+}
+.whois-card .glyph i {
+  color: #f59e0b;
+}
+.address-card .glyph i {
+  color: #06b6d4;
+}
+.aff-card .glyph i {
+  color: #10b981;
+}
+.scam-card .glyph i {
+  color: #ef4444;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .glyph i {
+    color: #ffffff;
+  }
+}
+
+/* 无 backdrop-filter 兜底 */
+@supports not (backdrop-filter: blur(0)) {
+  .socials .btn,
+  .socials .tooltip,
+  .card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .card::before {
+    display: none;
+  }
+}
+
+/* 辅助可访问性 */
+:focus-visible {
+  outline: 3px solid #94a3b8;
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* 降低动画 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
