@@ -1,6 +1,6 @@
 # uhomepage
 
-极简个人主页（纯静态 HTML/CSS/JS）。无跟踪、无 Cookie、无需构建，开箱即用。  
+极简个人主页（纯静态 HTML/CSS/JS）。
 **在线演示**：https://uocou.com
 
 [![Repo](https://img.shields.io/badge/GitHub-uslsu/uhomepage-24292e?logo=github&labelColor=181717&logoColor=white)](https://github.com/uslsu/uhomepage)
@@ -10,12 +10,11 @@
 
 ## 特性
 - 纯静态三件套：`index.html` / `style.css` / `app.js`
-- 亮色主题（**未启用暗色模式**）
+- 亮色主题
 - 基础可访问性：主标题（屏幕阅读器可见）、键盘焦点、tooltip 语义链接
 - 性能友好：Google Fonts `preconnect`、图片 `decoding="async"`、脚本 `defer`
 
 ## 预览
-> 建议在仓库根目录放一张 `screenshot.png`，此处可展示：  
 > `![预览图](./screenshot.png)`
 
 ## 快速开始
