@@ -1,12 +1,20 @@
+<div align="center">
+
 # uhomepage
 
 极简个人主页（纯静态 HTML/CSS/JS）
 <br><br><br>
 **在线演示**：https://uocou.com
 <br><br><br>
-[![Repo](https://img.shields.io/badge/GitHub-uslsu/uhomepage-24292e?logo=github&labelColor=181717&logoColor=white)](https://github.com/uslsu/uhomepage)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-<br>
+<p>
+  <a href="https://github.com/uslsu/uhomepage">
+    <img src="https://img.shields.io/badge/GitHub-uslsu/uhomepage-24292e?logo=github&labelColor=181717&logoColor=white" alt="Repo">
+  </a>
+  <a href="./LICENSE">
+    <img src="https.img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  </a>
+</p>
+
 ---
 
 ## 特性
@@ -19,9 +27,10 @@
 > ![预览图](/preview.png)
 
 ## 快速开始
+
 ```bash
 # 1) 克隆仓库
-git clone https://github.com/uslsu/uhomepage.git
+git clone [https://github.com/uslsu/uhomepage.git](https://github.com/uslsu/uhomepage.git)
 cd uhomepage
 
 # 2) 本地预览（任选其一）
@@ -32,3 +41,4 @@ python -m http.server 8000
 
 # 3) 打开浏览器访问本地地址
 # 直接打开 index.html 也可（无需服务端）
+</div>
