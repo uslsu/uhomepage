@@ -1,4 +1,4 @@
-# uhomepage
+# uocou-homepage
 
 A minimalist personal homepage template (HTML/CSS/JS). Clean, responsive, and ready to use.
 
@@ -53,7 +53,7 @@ A minimalist personal homepage template (HTML/CSS/JS). Clean, responsive, and re
 
 ```bash
 # 1) Clone repo
-git clone https://github.com/uslsu/uhomepage.git
+git clone https://github.com/uslsu/uocou-homepage.git
 cd uhomepage
 
 # 2) Local preview (choose one)
