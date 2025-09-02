@@ -5,7 +5,7 @@ A minimalist personal homepage template (HTML/CSS/JS). Clean, responsive, and re
 **Demo**: https://uocou.com
 
 <p>
-  <a href="https://github.com/uslsu/uocou-homepage"><img src="https://img.shields.io/badge/GitHub-uslsu/uocou--homepage-24292e?logo=github&labelColor=181717&logoColor=white" alt="Repo"></a>
+  <a href="https://github.com/uocou/uocou-homepage"><img src="https://img.shields.io/badge/GitHub-uocou/uocou--homepage-24292e?logo=github&labelColor=181717&logoColor=white" alt="Repo"></a>
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
@@ -54,7 +54,7 @@ A minimalist personal homepage template (HTML/CSS/JS). Clean, responsive, and re
 
 ```bash
 # 1) Clone repo
-git clone https://github.com/uslsu/uocou-homepage.git
+git clone https://github.com/uocou/uocou-homepage.git
 cd uhomepage
 
 # 2) Local preview (choose one)
