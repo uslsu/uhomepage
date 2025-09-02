@@ -2,7 +2,7 @@
 
 极简个人主页（纯静态 **HTML/CSS/JS**）
 
-**演示**：https://uocou.com
+**在线演示**：https://uocou.com
 
 <p>
   <a href="https://github.com/uslsu/uhomepage"><img src="https://img.shields.io/badge/GitHub-uslsu/uhomepage-24292e?logo=github&labelColor=181717&logoColor=white" alt="Repo"></a>
@@ -21,15 +21,26 @@
 
 ## ✅ 特性
 
+### 🎨 设计
 ✔️ 纯静态三件套：`index.html` / `style.css` / `app.js`  
 ✔️ 亮色主题，简洁布局  
 ✔️ 响应式设计，适配移动端  
-✔️ 基础可访问性（屏幕阅读器标题、键盘焦点、提示气泡）  
-✔️ 性能友好：Fonts `preconnect`、图片 `decoding="async"`、脚本 `defer`  
+✔️ 平滑悬停与动效  
+
+### ♿ 可访问性
+✔️ 屏幕阅读器主标题  
+✔️ 键盘焦点可见  
+✔️ Tooltip 语义链接  
+
+### ⚡ 性能优化
+✔️ Google Fonts `preconnect`  
+✔️ 图片 `decoding="async"`  
+✔️ 脚本 `defer`  
+
+### 🔗 集成功能
 ✔️ 自动设置个人头像和昵称  
 ✔️ 内置社交链接（Telegram、GitHub 等）  
 ✔️ 卡片式导航，快速跳转常用工具  
-✔️ 平滑悬停与动画效果  
 
 ---
 
