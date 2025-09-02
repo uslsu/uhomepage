@@ -1,4 +1,4 @@
-# uhomepage
+# uocou-homepage
 
 极简个人主页模板（HTML/CSS/JS）。简洁、响应式、即刻可用。
 
