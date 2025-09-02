@@ -2,7 +2,7 @@
 
 极简个人主页（纯静态 HTML/CSS/JS）
 <br><br><br>
-**在线演示**：https://uocou.com
+**在线演示**：uocou.com
 <br><br><br>
 [![Repo](https://img.shields.io/badge/GitHub-uslsu/uhomepage-24292e?logo=github&labelColor=181717&logoColor=white)](https://github.com/uslsu/uhomepage)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
