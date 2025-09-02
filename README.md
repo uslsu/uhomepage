@@ -1,6 +1,6 @@
 # uhomepage
 
-A minimalist personal homepage (pure static **HTML/CSS/JS**)
+A minimalist personal homepage template (HTML/CSS/JS). Clean, responsive, and ready to use.
 
 **Demo**: https://uocou.com
 
@@ -70,3 +70,8 @@ python -m http.server 8000
 
 ## 📜 License
 This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+## 🔑 Keywords
+homepage, personal website, portfolio, static site, html, css, javascript, minimalist homepage, personal homepage template, responsive homepage, blog template, image hosting, whois, address tools, affiliate links, scam record, 极简主页, 个人主页, 前端模板, 静态网站, 博客模板, 图床, 域名查询, 地址导航, 推广链接, 诈骗记录
