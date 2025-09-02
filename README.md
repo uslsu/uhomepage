@@ -21,15 +21,26 @@ A minimalist personal homepage (pure static **HTML/CSS/JS**)
 
 ## ✅ Features
 
+### 🎨 Design
 ✔️ Pure static stack: `index.html` / `style.css` / `app.js`  
 ✔️ Light theme, clean layout  
 ✔️ Responsive design, mobile-friendly  
-✔️ Accessibility basics (screen-reader title, keyboard focus, tooltips)  
-✔️ Performance friendly: Fonts `preconnect`, image `decoding="async"`, script `defer`  
+✔️ Smooth hover and animation effects  
+
+### ♿ Accessibility
+✔️ Screen-reader main title  
+✔️ Keyboard focus visible  
+✔️ Tooltip semantic links  
+
+### ⚡ Performance
+✔️ Google Fonts `preconnect`  
+✔️ Image `decoding="async"`  
+✔️ Script `defer`  
+
+### 🔗 Integration
 ✔️ Auto-setup personal avatar and display name  
 ✔️ Built-in social links (Telegram, GitHub, etc.)  
 ✔️ Card-based navigation for quick access to tools  
-✔️ Smooth hover and animation effects  
 
 ---
 
